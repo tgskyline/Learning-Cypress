@@ -1,4 +1,5 @@
-const { it } = require("mocha");
+/// <reference types = "cypress" />
+
 
 it('nada agora', function () { })
     function soma(a, b) {
