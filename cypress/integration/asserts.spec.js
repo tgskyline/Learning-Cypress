@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
-//comentário melhorado
+//Comentário de teste primeiro PUSH
+
 describe('Assertivas',()=>{
     it('Equality-Igualdade',()=>{
         const a = 1;

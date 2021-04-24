@@ -17,9 +17,7 @@ it('nada agora', function () { })
     //const soma=a=>a+a
 
     //const soma=()=> 5+5
-
-  //comentário melhorado
-  
+   
     console.log(soma(1,4))
 
     
