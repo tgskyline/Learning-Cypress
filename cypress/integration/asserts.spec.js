@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+//comentário melhorado
 describe('Assertivas',()=>{
     it('Equality-Igualdade',()=>{
         const a = 1;
