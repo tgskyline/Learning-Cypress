@@ -18,8 +18,7 @@ it('nada agora', function () { })
 
     //const soma=()=> 5+5
 
-    //teste
-
+  
     console.log(soma(1,4))
 
     
