@@ -11,6 +11,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.7.2",
     "cypress": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/bluebird-global": "^3.5.12"
   }
 }
