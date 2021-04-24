@@ -18,4 +18,13 @@ describe('Cypress Basic',()=>{
 //TODO Imprimir log no console
 //TODO Escrever o Title em campo de texto
 
+
+    it('Should find and interact with an element',()=>{
+      cy.visit('https://wcaquino.me/cypress/componentes.html')
+     
+      cy.get('#buttonSimple')
+        .click()
+    
+    })
+
 })
