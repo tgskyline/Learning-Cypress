@@ -7,7 +7,7 @@ it('Título teste externo...',() =>{
 describe('Subgrupo do teste...', () => {
     describe('Testes segundo nível mais especificos...', () => {
         describe('Testes terceiro nível...', () => {
-            it.skip('teste mais especifico...', () =>{
+            it('teste mais especifico...', () =>{
             })
 // skip é para não executar determinado teste
         })
