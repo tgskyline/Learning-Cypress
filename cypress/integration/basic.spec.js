@@ -7,7 +7,7 @@ describe('Cypress Basic',()=>{
         //const tittle = cy.title()
         //console.log(tittle)
 
-        cy.pause()
+        //cy.pause()
 
         cy.title().should('be.equal','Campo de Treinamento')
         cy.title().should('contain','Campo')
@@ -15,10 +15,17 @@ describe('Cypress Basic',()=>{
         cy.title()
             .should('be.equal','Campo de Treinamento')
             .and('contain','Campo')
+
+// IMPRESSÃO DO title no Log no resolvido
+
+        cy.title().then(title=>{
+
+            console.log(title)
+        })   
     })
 
 //TODO Imprimir log no console
-//TODO Escrever o Title em campo de texto
+//TODO RESOLVIDO Escrever o Title em campo de texto
 
 
     it('Should find and interact with an element',()=>{

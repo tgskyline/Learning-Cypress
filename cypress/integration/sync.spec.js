@@ -89,7 +89,7 @@ describe('Esperas...',()=>{
             .should('have.length', '2')
 
         })
-    it.only('Click Retry- Tentativa de vários click',()=>{
+    it('Click Retry- Tentativa de vários click',()=>{
 
         cy.get('#buttonCount')
             .click()
@@ -98,7 +98,13 @@ describe('Esperas...',()=>{
 
     })
         
+    it.only('Should vs Then',()=>{
+        cy.get('#buttonListDOM').click()
+        cy.get('#lista li span')
 
+
+
+    })
 
 
 })
