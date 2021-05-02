@@ -46,7 +46,7 @@ describe('Esperas...',()=>{
                 .should('contain', 'Item 2')
         })
 
-        it.only('Uso do find listacom DOM',()=>{
+        it('Uso do find listacom DOM',()=>{
           
             cy.get('#buttonListDOM').click()
             cy.get('#lista li')
@@ -58,6 +58,15 @@ describe('Esperas...',()=>{
             cy.get('#lista li span')
                .should('contain', 'Item 2')
         
+        })
+
+        it.only('Uso do Timeout', ()=>{
+
+            cy.get('#buttonDelay').click()
+            cy.get('#novoCampo').should('exist')
+
+// Ao Invés de definir timeout em cada pode ser definido para todos pela linha de comanda "defaultCommandtimout":1000 no arquivo cypress.json            
+
         })
 
 
