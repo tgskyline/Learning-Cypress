@@ -99,10 +99,17 @@ describe('Esperas...',()=>{
     })
         
     it.only('Should vs Then',()=>{
-        cy.get('#buttonListDOM').click()
-        cy.get('#lista li span')
+        //cy.get('#buttonListDOM').click()
+        cy.get('#buttonListDOM').then($el =>{
+            //.should('have.length',1)
+            //console.log($el)
+            expect($el).to.have.length(1)
+           //return 2
+            cy.get('#buttonList')
 
+//Then aguarda a busca para trazer o resultado, já o Should ele fica executando e tranzendo até get encontrar algo
 
+        })//.and('have.id', 'buttonListDOM')
 
     })
 
