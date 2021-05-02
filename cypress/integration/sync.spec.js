@@ -31,43 +31,74 @@ describe('Esperas...',()=>{
 // Não se pode fazer assertivas que uma seja oposto da outra!
     })
 
-        it('Uso do find',()=>{
+    it('Uso do find',()=>{
 
 //Atenção ao usar um "find" porque le fica preso no primeiro ponto usado
             
-            cy.get('#buttonList').click()
-            cy.get('#lista li')
-                .find('span')
-                .should('contain', 'Item 1')
-            //cy.get('#lista li')
-              //  .find('span')
-                //.should('contain', 'Item 2')
-            cy.get('#lista li span')
+        cy.get('#buttonList').click()
+        cy.get('#lista li')
+            .find('span')
+            .should('contain', 'Item 1')
+        //cy.get('#lista li')
+         //  .find('span')
+            //.should('contain', 'Item 2')
+        cy.get('#lista li span')
                 .should('contain', 'Item 2')
         })
 
-        it('Uso do find listacom DOM',()=>{
+    it('Uso do find listacom DOM',()=>{
           
-            cy.get('#buttonListDOM').click()
-            cy.get('#lista li')
-                .find('span')
-                .should('contain', 'Item 1')
-            //cy.get('#lista li')
-              //  .find('span')
-                //.should('contain', 'Item 2')
-            cy.get('#lista li span')
-               .should('contain', 'Item 2')
+        cy.get('#buttonListDOM').click()
+        cy.get('#lista li')
+            .find('span')
+            .should('contain', 'Item 1')
+        //cy.get('#lista li')
+        //  .find('span')
+            //.should('contain', 'Item 2')
+        cy.get('#lista li span')
+            .should('contain', 'Item 2')
         
         })
 
-        it.only('Uso do Timeout', ()=>{
+    it('Uso do Timeout I', ()=>{
 
-            cy.get('#buttonDelay').click()
-            cy.get('#novoCampo').should('exist')
+        cy.get('#buttonDelay').click()
+        //cy.get('#novoCampo',{timeout:1000}).should('exist')
+        cy.get('#novoCampo').should('exist')
 
 // Ao Invés de definir timeout em cada pode ser definido para todos pela linha de comanda "defaultCommandtimout":1000 no arquivo cypress.json            
 
         })
+
+    it('Uso do Timeout II',()=>{
+
+        //cy.get('#buttonListDOM').click()
+        //cy.wait(5000)
+        //cy.get('#lista li span',{timeout:30000})
+            //.should('contain', 'Item 2')
+        
+        //cy.get('#buttonListDOM').click()
+        //cy.get('#lista li span',{timeout:30000})
+            
+        cy.get('#buttonListDOM').click()
+        //cy.wait(5000) //Não usar WAIT
+        //cy.get('#lista li span',{timeout:30000})
+        cy.get('#lista li span')
+            .should('have.length', '1')
+        cy.get('#lista li span')
+            .should('have.length', '2')
+
+        })
+    it.only('Click Retry- Tentativa de vários click',()=>{
+
+        cy.get('#buttonCount')
+            .click()
+            .click()
+            .should('have.value','111')
+
+    })
+        
+
 
 
 })
