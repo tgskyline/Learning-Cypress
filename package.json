@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/core-js": "^2.5.4",
+    "@types/jasmine": "^3.7.4",
+    "@types/lodash": "^4.14.170",
     "bluebird": "^3.7.2",
     "cypress": "^3.6.0"
   },
