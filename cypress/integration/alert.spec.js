@@ -1,10 +1,12 @@
 /// <reference types = "cypress" />
 
+
 describe('Work with Alerts', () => {
 
     // Acessa o site para todos os demais testes
     before(() => {
         cy.visit('https://wcaquino.me/cypress/componentes.html')
+        cy.viewport(1000,700)
     })
 
     // Antes de acessar ele irá recarregar a página para um novo teste
@@ -68,7 +70,7 @@ describe('Work with Alerts', () => {
         cy.get('#prompt').click()
         
     })
-    it.only('validando Mensagens',()=>{
+    it.only('Validando Mensagens',()=>{
         const stub = cy.stub().as('alerta')
         cy.on('window:alert',stub)
         cy.get('#formCadastrar').click()
