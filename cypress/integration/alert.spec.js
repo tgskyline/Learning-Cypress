@@ -22,7 +22,7 @@ describe('Work with Alerts', () => {
         })
     })
     
-    it.only('Alert com Mock',()=>{
+    it('Alert com Mock',()=>{
         const stub =cy.stub().as('alerta') //as('alerta da um nome ao "Alias(es)")
         cy.on('window:alert', stub)
         cy.get('#alert').click().then(()=>{
@@ -31,5 +31,16 @@ describe('Work with Alerts', () => {
         })
          
     })
+    
+    it.only('Confirm',()=>{
+        cy.on('window:confirm', msg => {
+            expect(msg).to.be.equal('Confirm Simples')
+        })
+        cy.on('window:alert', msg => {
+            expect(msg).to.be.equal('Confirmado')
+        })
+        cy.get('#confirm').click()
+        
+    })   
 })
     
