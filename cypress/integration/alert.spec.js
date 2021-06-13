@@ -18,8 +18,18 @@ describe('Work with Alerts', () => {
         cy.on('window:alert', msg => {
             console.log(msg)
             expect(msg).to.be.equal('Alert Simples')
+            // No console para gerar um alerta dentro da estrutura HTML window.alert('Mensagem de Teste')    
         })
-    // No console para gerar um alerta dentro da estrutura HTML window.alert('Mensagem de Teste')    
     })
+    
+    it.only('Alert com Mock',()=>{
+        const stub =cy.stub().as('alerta') //as('alerta da um nome ao "Alias(es)")
+        cy.on('window:alert', stub)
+        cy.get('#alert').click().then(()=>{
+            expect(stub.getCall(0)).to.be.calledWith('Alert Simples')
 
-})    
+        })
+         
+    })
+})
+    
