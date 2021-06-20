@@ -21,6 +21,6 @@ import './commands'
 
 //Definição de Estratégiade Localição de Elementos
 Cypress.SelectorPlayground.defaults({
-    selectorPriority: ['id', 'class', 'attributes','data-cy','data-test','data-testid','tag','nth-child'],
+    selectorPriority: ['data-wc', 'id', 'class', 'attributes','data-cy','data-test','data-testid','tag','nth-child'],
   })
 
