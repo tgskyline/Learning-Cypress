@@ -22,7 +22,11 @@ describe('Work with basic elemets', () => {
 
     it('using jquery selector', () =>{
         cy.get(':nth-child(1) > :nth-child(3) > [type="button"]')
-        cy.get('table#tabelaUsuarios tbody >tr:eq(0) td:nth-child(3) >input').click()
+        cy.get('table#tabelaUsuarios tbody >tr:eq(0) td:nth-child(3) >input')
+        cy.get('[onclick*=\'Francisco\']') // Usar \ antes do ' como caracter de escape
+        cy.get("[onclick*='Francisco']") // Usar " antes do [] como caracter de escape
+        cy.get('table#tabelaUsuarios td:contains(\'Doutorado\'):eq(0)~td:eq(3)>input ') // Por célula
+        cy.get('table#tabelaUsuarios tr:contains(\'Doutorado\'):eq(0) td:eq(6)') // Por linha
     })
 
 })    
