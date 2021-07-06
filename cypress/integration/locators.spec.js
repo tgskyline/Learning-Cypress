@@ -29,4 +29,9 @@ describe('Work with basic elemets', () => {
         cy.get('table#tabelaUsuarios tr:contains(\'Doutorado\'):eq(0) td:eq(6)') // Por linha
     })
 
+    it('Using Xpath',() =>{
+        cy.xpath('//input')
+
+    })
+
 })    
