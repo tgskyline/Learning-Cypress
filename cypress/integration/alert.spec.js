@@ -15,13 +15,14 @@ describe('Work with Alerts', () => {
 
     })    
 
-    it('Alert',()=>{
-        cy.get('#alert').click()
-        cy.on('window:alert', msg => {
-            console.log(msg)
-            expect(msg).to.be.equal('Alert Simples')
+    it.only('Alert',()=>{
+      //cy.get('#alert').click()
+        //cy.on('window:alert', msg => {
+          //  console.log(msg)
+            //expect(msg).to.be.equal('Alert Simples')
             // No console para gerar um alerta dentro da estrutura HTML window.alert('Mensagem de Teste')    
-        })
+        //}) 
+        cy.clickAlert('#alert','Alert Simples')
     })
     
     it('Alert com Mock',()=>{
@@ -70,7 +71,7 @@ describe('Work with Alerts', () => {
         cy.get('#prompt').click()
         
     })
-    it.only('Validando Mensagens',()=>{
+    it('Validando Mensagens',()=>{
         const stub = cy.stub().as('alerta')
         cy.on('window:alert',stub)
         cy.get('#formCadastrar').click()
