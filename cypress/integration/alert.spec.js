@@ -22,11 +22,7 @@ describe('Work with Alerts', () => {
             //expect(msg).to.be.equal('Alert Simples')
             // No console para gerar um alerta dentro da estrutura HTML window.alert('Mensagem de Teste')    
         //}) 
-<<<<<<< HEAD
-        cy.clickAlert('#alert','Alert Simples')
-=======
         cy.clickAlert('#alert','Alert Simples') //Exemplo de como inserir um commad do arquivo command.js
->>>>>>> develop
     })
     
     it('Alert com Mock',()=>{
